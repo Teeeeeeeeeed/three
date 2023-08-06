@@ -1,0 +1,23 @@
+<mat-drawer-container autosize>
+    <mat-drawer #drawer>
+        <div class="side-content">
+            <h1>View Location</h1>
+            <p> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique vel diam vitae rhoncus. 
+                Aenean quis pretium eros, eget volutpat ipsum. Cras a tristique nulla, quis bibendum mauris. Integer ornare velit velit, vel iaculis nisl vehicula vel. 
+                Quisque odio nunc, ultricies in pretium ut, condimentum sed libero. Praesent ex turpis, pellentesque quis orci at, placerat laoreet eros. Morbi molestie, 
+                dolor ut tempus facilisis, tellus nisl tempus nibh, ut tempus mauris dui et ante. Morbi et nunc bibendum, tempor felis vel, efficitur tellus. Donec mi mauris, 
+                vulputate at est vitae, egestas posuere turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eu elementum arcu. 
+                Etiam non congue nunc. Phasellus ultrices lectus et tellus tempor, eu fermentum urna maximus. Etiam nec gravida tellus. Curabitur vulputate a nibh non porttitor. Donec eget porttitor metus.
+            </p>
+            <video controls #video ></video>
+        </div>
+
+    </mat-drawer>
+    <div #canvas id="canvas" style="height: 100%; width: 100%"></div>
+    <mat-spinner *ngIf="!(scene$ | async)"></mat-spinner>
+    <div class="buttons">
+        <button mat-raised-button color="primary" *ngIf="(scene$ | async)" (click)="toggleViews()"> View {{currentView === 'Pre-Mining'? 'Pre-Mining' : 'Mining'}} Stage</button>
+    </div>
+
+</mat-drawer-container>

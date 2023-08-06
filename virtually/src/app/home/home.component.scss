@@ -1,0 +1,29 @@
+
+mat-spinner {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%)
+}
+mat-drawer{
+    background-color: rgb(56, 56, 56);
+    width: 400px;
+    color: white;
+} 
+
+.side-content {
+    display: flex;
+    flex-direction: column;
+    > * {
+        margin:16px;
+    }
+}
+
+.buttons {
+    position:absolute;
+    top: 16px;
+    left: 16px;
+    > * {
+        margin:4px;
+    }
+}
